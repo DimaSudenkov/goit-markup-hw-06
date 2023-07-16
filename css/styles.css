@@ -194,9 +194,15 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2E2F42;
-    padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    padding: 24px 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width:1157px) {
+  .header-link {
+    padding: 31px 0;
+  }
 }
 
 .header-link.active{
@@ -251,7 +257,7 @@ img{
 
 .header-networks-item {}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width:1157px) {
   .header-networks-item:not(:last-child) {
       margin-bottom: 12px;
   }
@@ -265,6 +271,14 @@ img{
     letter-spacing: 0.02em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .header-networks-link {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+  }
 }
 
 .header-networks .header-networks-link:hover,
@@ -742,7 +756,7 @@ img{
 
     /* display:flex;
     justify-content:center;
-    gap:24px; */
+    gap:24px; */i
 }
 
 
@@ -760,6 +774,7 @@ img{
     }
   }
 
+
 .customers-item {}
 
 @media only screen and (max-width: 767px) {
@@ -768,18 +783,18 @@ img{
     }
 }
 
-/* @media only screen and (min-width: 768px) {
-    .customers-list {
-        width: calc((100% - 48px) / 3);
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .customers-item {
+        width: 168px;
     }
-} */
+}
 
 .customers-link {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 168px;;
+    /* width: 168px;; */
     height: 88px;
 
     border-radius: 4px;
@@ -988,7 +1003,7 @@ img{
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (max-width: 1157px) {
     .form-email{
     gap: 24px;
   }
@@ -1016,7 +1031,7 @@ img{
     border-radius: 4px;
     color: #ffffff;
 
-    margin-right: 22px;
+    /* margin-right: 22px; */
 
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     outline: transparent;
@@ -1027,6 +1042,13 @@ img{
 @media only screen and (max-width: 767px) {
   .form-input-email {
     width:100%
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .form-input-email {
+    margin-right: 24px;
+    width: 264px;
   }
 }
 
@@ -1206,7 +1228,7 @@ img{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 408px;
-    min-height: 584px;
+    /* min-height: 584px; */
     background-color: #FCFCFC;
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1216,7 +1238,17 @@ img{
 
 @media only screen and (max-width: 767px) {
   .modal {
-    width: 392px;
+    width:95%;
+    max-width: 392px;
+    height: 95%;
+    max-height: 584px;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (min-width: minwidthpx) {
+  .modal {
+      min-height: 584px;
   }
 }
 
@@ -1514,6 +1546,12 @@ img{
 .mobile-networks-list {
     display: flex;
     gap: 56px;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-networks-list {
+    gap: 35px;
+  }
 }
 
 .mobile-networks-item {}
